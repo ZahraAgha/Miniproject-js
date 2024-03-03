@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav {
+  width: 100%;
+  background-color: transparent;
+  padding-top: 31px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+}
+
+.navMenu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 29px;
+  font-size: 14px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+}
+
+ul li a:hover {
+  color: #717fe0;
+  cursor: pointer;
+}
+
+.logo {
+  margin-left: 46px;
+}
+
+.iconMenu {
+  display: flex;
+  margin-right: 50px;
+  gap: 10px;
+}
+
+/* slide */
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.slides {
+  display: flex;
+}
+.slide {
+  min-width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  background-color: black;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* cards */
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.card {
+  width: 22%;
+}
+
+.card a {
+  text-decoration: none;
+  color: #b2b2b2;
+}
+
+.card a:hover {
+  color: #717fe0;
+  cursor: pointer;
+}
+.card img {
+  width: 100%;
+}
+.cardBody {
+  display: flex;
+  justify-content: space-between;
+}
+.cardImage {
+  overflow-y: hidden;
+  transition: transform 0.6s;
+  position: relative;
+  display: inline-block;
+}
+.cardImage:hover img {
+  width: 100%;
+  transition: transform 0.6s;
+  transform: scaleY(1.1);
+}
+
+.cardImage:hover .btnView {
+  bottom: 10px;
+  opacity: 1;
+}
+
+.closeMark {
+  position: absolute;
+  right: 0;
+  top: -41px;
+  border: none;
+  background-color: transparent;
+  color: #b2b2b2;
+  font-size: 34px;
+}
+
+.closeMark:hover {
+  color: white;
+  transition: 0.6s;
+}
+
+.btnView {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease, bottom 0.5s ease;
+}
+
+footer {
+  background-color: #222222;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+}
+
+h4 {
+  color: white;
+}
+
+.category p {
+  color: #b2b2b2;
+}
+
+.category a {
+  color: #b2b2b2;
+  text-decoration: none;
+}
+hr {
+  color: white;
+}
+
+.categoryImages {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  position: fixed;
+  top: 9%;
+  display: none;
+  right: 8%;
+  z-index: 5000;
+  color: white;
+  padding: 40px 60px;
+}
+
+.selectedCard {
+  background-color: #e9e3dc;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-to-cart {
+  right: 276px;
+  bottom: 85px;
+  background-color: #717fe0;
+  position: absolute;
+  font-family: Poppins-Medium;
+  font-size: 15px;
+  line-height: 1.466667;
+  text-transform: uppercase;
+}
+
+.box img {
+  width: 200px;
+  height: 200px;
+  padding-left: 40px;
+}
+
+.burger {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.burger-btn {
+  font-size: 30px;
+  /* z-index: -1; */
+}
+#sideBar {
+  width: 450px;
+  z-index: 1000;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  transition: 0.5s;
+  background-color: antiquewhite;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sideBarTexts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  width: 100%;
+  padding: 20px;
+}
+.close i {
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#loadMore {
+  width: 200px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: blue;
+  transition: 0.3s;
+}
+#loadMore:hover {
+  color: blue;
+  background-color: #fff;
+  border: 1px solid blue;
+  text-decoration: none;
+}
+.noContent {
+  color: #000 !important;
+  background-color: transparent !important;
+  pointer-events: none;
+}
+
+.Imageblock img {
+  width: 300px;
+  height: 200px;
+}
+
+.threeCard {
+  border: 1px solid lightgray;
+  padding: 48px;
+}
+
+.threeCards {
+  padding: 59px 14px 49px 19px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+  .navMenu ul {
+    gap: 40px;
+  }
+  .iconMenu {
+    margin-right: 60px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .navMenu ul {
+    gap: 20px;
+  }
+  .iconMenu {
+    margin-right: 40px;
+  }
+  .iconMenu .search,
+  .iconMenu .shoppingCard,
+  .iconMenu .heart {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navMenu {
+    display: none;
+  }
+  .iconMenu {
+    margin-right: 20px;
+  }
+  .iconMenu .search,
+  .iconMenu .shoppingCard,
+  .iconMenu .heart {
+    display: none;
+  }
+  #sideBar {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+    display: none;
+  }
+  #sideBar.active {
+    display: block;
+  }
+}
